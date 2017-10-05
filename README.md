@@ -35,7 +35,8 @@ Download
 
 ```groovy
 dependencies {
-  // TBD
+    // or use 'compile' for older versions of gradle
+    implementation 'com.jzallas:rxdisposal:0.0.1'
 }
 ```
 
