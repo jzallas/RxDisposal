@@ -1,1 +1,1 @@
-include ':sample-app', ':rxdisposal'
+include ':sample-app', ':rxdisposal', ':rxdisposal-lifecycleaware'

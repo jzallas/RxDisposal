@@ -67,14 +67,4 @@ public class CompositeDisposalTest {
         testCompositeDisposable.add(mockDisposable);
         assertFalse(testDisposal.isDisposed());
     }
-
-    @Test
-    public void testDisposableAddedDuringDelegate() {
-        assertEquals(0, testCompositeDisposable.size());
-
-        testDisposal.delegateDisposable(mockDisposable);
-
-        assertEquals(1, testCompositeDisposable.size());
-    }
-
 }

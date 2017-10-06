@@ -12,8 +12,8 @@ import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
-public class SimpleDisposalTest {
-    private SimpleDisposal testDisposal;
+public class SerialDisposalTest {
+    private SerialDisposal testDisposal;
 
     @Mock
     private Disposable mockDisposable;
@@ -21,7 +21,7 @@ public class SimpleDisposalTest {
     @Before
     public void setUp() {
         MockitoAnnotations.initMocks(this);
-        testDisposal = new SimpleDisposal();
+        testDisposal = new SerialDisposal();
     }
 
     @Test
@@ -79,16 +79,5 @@ public class SimpleDisposalTest {
         assertFalse(testDisposal.isDisposed());
 
         verify(mockDisposable, times(1)).isDisposed();
-    }
-
-    @Test
-    public void testDisposableAddedDuringDelegate() {
-        doReturn(false)
-                .when(mockDisposable)
-                .isDisposed();
-
-        testDisposal.delegateDisposable(mockDisposable);
-
-        assertFalse(testDisposal.isDisposed());
     }
 }
