@@ -10,6 +10,22 @@
     tools:showIn="@layout/activity_main">
 
     <TextView
+        android:id="@+id/textview0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:paddingLeft="@dimen/progressbar_padding"
+        android:paddingRight="@dimen/progressbar_padding"
+        android:progress="0"
+        tools:progress="50" />
+
+    <TextView
         android:id="@+id/textview1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

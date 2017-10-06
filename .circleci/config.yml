@@ -13,14 +13,14 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum "sample-app/build.gradle" }}-{{ checksum "rxdisposal/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum "sample-app/build.gradle" }}-{{ checksum "rxdisposal/build.gradle" }}-{{ checksum "rxdisposal-lifecycleaware/build.gradle" }}
       - run:
           name: Download Dependencies
           command: ./gradlew androidDependencies
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum "sample-app/build.gradle" }}-{{ checksum "rxdisposal/build.gradle" }}
+          key: jars-{{ checksum "build.gradle" }}-{{ checksum "sample-app/build.gradle" }}-{{ checksum "rxdisposal/build.gradle" }}-{{ checksum "rxdisposal-lifecycleaware/build.gradle" }}
       - run:
           name: Run Tests
           command: ./gradlew lint test
@@ -34,3 +34,8 @@ jobs:
           destination: rxdisposal/reports
       - store_test_results:
           path: rxdisposal/build/test-results
+      - store_artifacts:
+          path: rxdisposal-lifecycleaware/build/reports
+          destination: rxdisposal-lifecycleaware/reports
+      - store_test_results:
+          path: rxdisposal-lifecycleaware/build/test-results

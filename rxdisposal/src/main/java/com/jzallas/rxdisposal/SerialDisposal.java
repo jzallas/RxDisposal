@@ -3,11 +3,13 @@ package com.jzallas.rxdisposal;
 import io.reactivex.disposables.Disposable;
 
 /**
- * {@link Disposal} that keeps track of the last {@link Disposable} it has seen.
+ * Reusable {@link Disposal} that keeps track of the last {@link Disposable} it has seen.
  * If another {@link Disposable} is registered, the last {@link Disposable}
- * will have {@link Disposable#dispose()} called before being replaced by the new {@link Disposable}
+ * will have {@link Disposable#dispose()} called before being replaced by the new {@link Disposable}.
  */
-public final class SimpleDisposal extends SubscriptionDecorator implements Disposal {
+public final class SerialDisposal implements Disposal {
+
+    // TODO: 10/6/2017 Consider using SerialDisposable
     private Disposable disposable;
 
     @Override
@@ -40,8 +42,4 @@ public final class SimpleDisposal extends SubscriptionDecorator implements Dispo
         return disposable == null || disposable.isDisposed();
     }
 
-    @Override
-    protected void delegateDisposable(Disposable disposable) {
-        register(disposable);
-    }
 }
