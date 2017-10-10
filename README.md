@@ -57,10 +57,10 @@ Dependencies
 ------------
 ```groovy
 dependencies {
-    implementation 'com.jzallas:rxdisposal:0.1.0'
+    implementation 'com.jzallas:rxdisposal:0.1.1'
 
     // if you want to use Automatic Disposal
-    implementation 'com.jzallas:rxdisposal-lifecycleaware:0.1.0'
+    implementation 'com.jzallas:rxdisposal-lifecycleaware:0.1.1'
 }
 ```
 
