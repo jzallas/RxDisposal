@@ -1,3 +1,8 @@
+Version 0.1.1 *(10/10/2017)*
+----------------------------
+
+Updated dependencies to latest [LifecycleAware](https://github.com/jzallas/LifecycleAware).
+
 Version 0.1.0 *(10/06/2017)*
 ----------------------------
 

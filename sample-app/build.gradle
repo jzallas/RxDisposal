@@ -37,7 +37,7 @@ dependencies {
 
     implementation project(':rxdisposal')
 
-    implementation 'com.jzallas:lifecycleaware:0.0.1'
-    annotationProcessor 'com.jzallas:lifecycleaware-compiler:0.0.1'
+    implementation 'com.jzallas:lifecycleaware:0.1.0'
+    annotationProcessor 'com.jzallas:lifecycleaware-compiler:0.1.0'
     implementation project(':rxdisposal-lifecycleaware')
 }
