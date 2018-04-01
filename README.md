@@ -1,6 +1,8 @@
 RxDisposal
 ============
 
+<img src="/res/android_fish.png" width="200">
+
 [![CircleCI](https://circleci.com/gh/jzallas/RxDisposal/tree/master.svg?style=shield)](https://circleci.com/gh/jzallas/RxDisposal/tree/master)
 
 A convenient 'garbage disposal' that can hook into an rx streams.
@@ -63,6 +65,9 @@ dependencies {
     implementation 'com.jzallas:rxdisposal-lifecycleaware:0.1.1'
 }
 ```
+
+
+Credit logo to Zhuoshi Xie
 
 License
 -------
